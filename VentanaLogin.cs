@@ -18,6 +18,11 @@ namespace ProyectoVeterinario_2021
             InitializeComponent();
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit(); //cierra la aplicación completamente.
+        }
+
         public void textEmail_Click(object sender, EventArgs e)
         {
             if (textEmail.Text.Equals("Introduzca el email"))
@@ -38,11 +43,6 @@ namespace ProyectoVeterinario_2021
         }
         public void botonLogin_Click(object sender, EventArgs e)
         {
-            ////Esto lo uso para entrar directamente en pruebas
-            //this.Hide();
-            //ventanaPrincipal ventana = new ventanaPrincipal();
-            //ventana.Show();
-
             String email = textEmail.Text; //leo lo que el usuario halla puesto.
             String password = textContraseña.Text;
             //Cuenta de prueba; email= pepito@gmail.com | contraseña= 1234
@@ -50,9 +50,24 @@ namespace ProyectoVeterinario_2021
             {
                 String emailUsado = textEmail.Text;
                 this.Hide();
-                ventanaPrincipal ventana2 = new ventanaPrincipal();
-                ventana2.asignaPerfil(emailUsado);
-                ventana2.Show();
+                if (emailUsado.Contains("@admin.com"))//Contraseña: 0101
+                {
+                    ventanaAdmin ventana0 = new ventanaAdmin();
+                    ventana0.asignaPerfil(emailUsado);
+                    ventana0.Show();
+                }
+                else if (emailUsado.Contains("@weloveanimals.com"))
+                {
+                    ventanaEmpleado ventana1 = new ventanaEmpleado();
+                    ventana1.asignaPerfil(emailUsado);
+                    ventana1.Show();
+                }
+                else
+                {
+                    ventanaPrincipal ventana2 = new ventanaPrincipal();
+                    ventana2.asignaPerfil(emailUsado);
+                    ventana2.Show();
+                }
             }
             else //la contraseña o el usuario son incorrectos
             {

@@ -53,6 +53,7 @@
             this.textEmail.Size = new System.Drawing.Size(478, 38);
             this.textEmail.TabIndex = 5;
             this.textEmail.UseWaitCursor = true;
+            this.textEmail.TextChanged += new System.EventHandler(this.textEmail_TextChanged);
             // 
             // botonLogin
             // 
@@ -74,6 +75,9 @@
             this.Controls.Add(this.botonLogin);
             this.Controls.Add(this.textEmail);
             this.Controls.Add(this.listaUsuarios);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "listaClientes";
             this.Text = "listaClientes";
             ((System.ComponentModel.ISupportInitialize)(this.listaUsuarios)).EndInit();

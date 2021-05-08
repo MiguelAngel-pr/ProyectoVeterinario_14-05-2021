@@ -12,16 +12,24 @@ namespace ProyectoVeterinario_2021
 {
     public partial class ventanaAdmin : Form
     {
+        Conexion miConexion = new Conexion();
         public ventanaAdmin()
         {
             InitializeComponent();
         }
-
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit(); //cierra la aplicación completamente.
+        }
         private void botonVerClientes_Click(object sender, EventArgs e)
         {
             this.Hide();
             listaClientes ventana = new listaClientes();
             ventana.Show();
+        }
+        public void asignaPerfil(String correo)
+        {
+            DataTable perfilElegido = miConexion.getPerfil(correo);
         }
     }
 }

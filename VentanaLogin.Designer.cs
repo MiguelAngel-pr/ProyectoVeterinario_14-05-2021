@@ -42,6 +42,7 @@ namespace ProyectoVeterinario_2021
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.checkBoxContraseña = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -181,12 +182,24 @@ namespace ProyectoVeterinario_2021
             this.checkBoxContraseña.UseVisualStyleBackColor = true;
             this.checkBoxContraseña.CheckedChanged += new System.EventHandler(this.checkBoxContraseña_CheckedChanged);
             // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Quicksand Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label3.Location = new System.Drawing.Point(251, 173);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(146, 32);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "We❤Animals";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // VentanaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(634, 461);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.checkBoxContraseña);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
@@ -198,7 +211,10 @@ namespace ProyectoVeterinario_2021
             this.Controls.Add(this.textContraseña);
             this.Controls.Add(this.textEmail);
             this.Controls.Add(this.Logo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "VentanaLogin";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -224,6 +240,7 @@ namespace ProyectoVeterinario_2021
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox checkBoxContraseña;
+        private System.Windows.Forms.Label label3;
     }
 }
 

@@ -20,8 +20,17 @@ namespace ProyectoVeterinario_2021
         public listaClientes()
         {
             InitializeComponent();
-            misClientes = miConexion.getLista();
-            listaUsuarios.DataSource = misClientes;
+            //misClientes = miConexion.getLista();
+            //listaUsuarios.DataSource = misClientes;
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit(); //cierra la aplicación completamente.
+        }
+
+        private void textEmail_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

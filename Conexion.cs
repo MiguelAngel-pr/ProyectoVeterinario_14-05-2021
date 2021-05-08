@@ -13,7 +13,8 @@ namespace ProyectoVeterinario_2021
         public MySqlConnection conexion; //variable que se encarga de conectarnos al servidor MySql
         public Conexion()
         { //el constructor de la clase
-            conexion = new MySqlConnection("Server=127.0.0.1; Database=ejercicio_veterinario; Uid=root; Pwd=root; Port=3306");
+          //La contraseña es "root" o "".
+            conexion = new MySqlConnection("Server=127.0.0.1; Database=ejercicio_veterinario; Uid=root; Pwd=; Port=3306");
         }
         public Boolean loginInicial(String _email, String _password)
         {
@@ -21,14 +22,14 @@ namespace ProyectoVeterinario_2021
             {
                 conexion.Open();
                 MySqlCommand consulta = new MySqlCommand("SELECT * FROM cliente WHERE email=@_email", conexion);
-                MySqlCommand consultaIdPerfil = new MySqlCommand("SELECT perfil FROM cliente WHERE email=@_email", conexion);
+                //MySqlCommand consultaIdPerfil = new MySqlCommand("SELECT perfil FROM cliente WHERE email=@_email", conexion);
                 consulta.Parameters.AddWithValue("@_email", _email);
                 MySqlDataReader resultado = consulta.ExecuteReader(); //guardo el resultado de la query
-                MySqlDataReader resultado2 = consultaIdPerfil.ExecuteReader();
+                //MySqlDataReader resultado2 = consultaIdPerfil.ExecuteReader();
                 if (resultado.Read())
                 {
                     String passHasheada = resultado.GetString("password");
-                    String idPerfil = resultado2.GetString("perfil");
+                    //String idPerfil = resultado2.GetString("perfil");
                     if (BCrypt.Net.BCrypt.Verify(_password, passHasheada)/* && idPerfil=="0"*/)
                     {
                         conexion.Close();
@@ -95,7 +96,7 @@ namespace ProyectoVeterinario_2021
             }
         }
 
-        public DataTable getLista()
+        /*public DataTable getLista()
         {
             try
             {
@@ -111,7 +112,6 @@ namespace ProyectoVeterinario_2021
             {
                 throw e;
             }
-
-        }
+        }*/
     }
 }

@@ -17,7 +17,6 @@ namespace ProyectoVeterinario_2021
         public ventanaPrincipal()
         {
             InitializeComponent();
-            //asignaPerfil();
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -31,7 +30,6 @@ namespace ProyectoVeterinario_2021
         public void asignaPerfil(String correo)
         {
             DataTable perfilElegido = miConexion.getPerfil(correo);
-            //MessageBox.Show(perfilElegido.Rows[0]["nombre"].ToString());
             textoNombre.Text = "Nombre: " + perfilElegido.Rows[0]["nombre"].ToString();
             textoApellido.Text = "Apellido: " + perfilElegido.Rows[0]["apellido"].ToString();
             textoEmail.Text = "Email: " + perfilElegido.Rows[0]["email"].ToString();

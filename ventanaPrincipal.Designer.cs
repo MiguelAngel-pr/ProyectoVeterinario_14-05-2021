@@ -38,21 +38,22 @@ namespace ProyectoVeterinario_2021
             this.textoEmail = new System.Windows.Forms.Label();
             this.textoApellido = new System.Windows.Forms.Label();
             this.textoNombre = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textoMascota1 = new System.Windows.Forms.Label();
-            this.textoMascota2 = new System.Windows.Forms.Label();
-            this.textoMascota3 = new System.Windows.Forms.Label();
-            this.textoMascota4 = new System.Windows.Forms.Label();
             this.fotoPerfil = new System.Windows.Forms.PictureBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textoMascota4 = new System.Windows.Forms.Label();
+            this.textoMascota3 = new System.Windows.Forms.Label();
+            this.textoMascota2 = new System.Windows.Forms.Label();
+            this.textoMascota1 = new System.Windows.Forms.Label();
             this.imagenMascota4 = new System.Windows.Forms.PictureBox();
             this.imagenMascota3 = new System.Windows.Forms.PictureBox();
             this.imagenMascota2 = new System.Windows.Forms.PictureBox();
             this.imagenMascota1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPerfil)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenMascota4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenMascota3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenMascota2)).BeginInit();
@@ -75,6 +76,7 @@ namespace ProyectoVeterinario_2021
             this.tabPage1.BackColor = System.Drawing.Color.PowderBlue;
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.fotoPerfil);
+            this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.ForeColor = System.Drawing.Color.DarkCyan;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -147,6 +149,18 @@ namespace ProyectoVeterinario_2021
             this.textoNombre.TabIndex = 4;
             this.textoNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // fotoPerfil
+            // 
+            this.fotoPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.fotoPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fotoPerfil.Image = global::ProyectoVeterinario_2021.Properties.Resources.image__1_;
+            this.fotoPerfil.Location = new System.Drawing.Point(160, 36);
+            this.fotoPerfil.Name = "fotoPerfil";
+            this.fotoPerfil.Size = new System.Drawing.Size(163, 163);
+            this.fotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fotoPerfil.TabIndex = 1;
+            this.fotoPerfil.TabStop = false;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.PowderBlue;
@@ -166,25 +180,15 @@ namespace ProyectoVeterinario_2021
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Tus Mascotas";
             // 
-            // textoMascota1
+            // textoMascota4
             // 
-            this.textoMascota1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoMascota1.ForeColor = System.Drawing.Color.PowderBlue;
-            this.textoMascota1.Location = new System.Drawing.Point(14, 184);
-            this.textoMascota1.Name = "textoMascota1";
-            this.textoMascota1.Size = new System.Drawing.Size(163, 30);
-            this.textoMascota1.TabIndex = 6;
-            this.textoMascota1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textoMascota2
-            // 
-            this.textoMascota2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoMascota2.ForeColor = System.Drawing.Color.PowderBlue;
-            this.textoMascota2.Location = new System.Drawing.Point(311, 184);
-            this.textoMascota2.Name = "textoMascota2";
-            this.textoMascota2.Size = new System.Drawing.Size(163, 30);
-            this.textoMascota2.TabIndex = 7;
-            this.textoMascota2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.textoMascota4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoMascota4.ForeColor = System.Drawing.Color.PowderBlue;
+            this.textoMascota4.Location = new System.Drawing.Point(311, 421);
+            this.textoMascota4.Name = "textoMascota4";
+            this.textoMascota4.Size = new System.Drawing.Size(163, 30);
+            this.textoMascota4.TabIndex = 9;
+            this.textoMascota4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textoMascota3
             // 
@@ -196,27 +200,25 @@ namespace ProyectoVeterinario_2021
             this.textoMascota3.TabIndex = 8;
             this.textoMascota3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textoMascota4
+            // textoMascota2
             // 
-            this.textoMascota4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoMascota4.ForeColor = System.Drawing.Color.PowderBlue;
-            this.textoMascota4.Location = new System.Drawing.Point(311, 421);
-            this.textoMascota4.Name = "textoMascota4";
-            this.textoMascota4.Size = new System.Drawing.Size(163, 30);
-            this.textoMascota4.TabIndex = 9;
-            this.textoMascota4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.textoMascota2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoMascota2.ForeColor = System.Drawing.Color.PowderBlue;
+            this.textoMascota2.Location = new System.Drawing.Point(311, 184);
+            this.textoMascota2.Name = "textoMascota2";
+            this.textoMascota2.Size = new System.Drawing.Size(163, 30);
+            this.textoMascota2.TabIndex = 7;
+            this.textoMascota2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // fotoPerfil
+            // textoMascota1
             // 
-            this.fotoPerfil.BackColor = System.Drawing.Color.Transparent;
-            this.fotoPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fotoPerfil.Image = global::ProyectoVeterinario_2021.Properties.Resources.image__1_;
-            this.fotoPerfil.Location = new System.Drawing.Point(160, 36);
-            this.fotoPerfil.Name = "fotoPerfil";
-            this.fotoPerfil.Size = new System.Drawing.Size(163, 163);
-            this.fotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fotoPerfil.TabIndex = 1;
-            this.fotoPerfil.TabStop = false;
+            this.textoMascota1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoMascota1.ForeColor = System.Drawing.Color.PowderBlue;
+            this.textoMascota1.Location = new System.Drawing.Point(14, 184);
+            this.textoMascota1.Name = "textoMascota1";
+            this.textoMascota1.Size = new System.Drawing.Size(163, 30);
+            this.textoMascota1.TabIndex = 6;
+            this.textoMascota1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // imagenMascota4
             // 
@@ -266,6 +268,14 @@ namespace ProyectoVeterinario_2021
             this.imagenMascota1.TabIndex = 2;
             this.imagenMascota1.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel2.Location = new System.Drawing.Point(153, 32);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(178, 173);
+            this.panel2.TabIndex = 6;
+            // 
             // ventanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,13 +283,16 @@ namespace ProyectoVeterinario_2021
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(484, 561);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ventanaPrincipal";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fotoPerfil)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imagenMascota4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenMascota3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenMascota2)).EndInit();
@@ -308,5 +321,6 @@ namespace ProyectoVeterinario_2021
         private System.Windows.Forms.PictureBox imagenMascota3;
         private System.Windows.Forms.PictureBox imagenMascota2;
         private System.Windows.Forms.PictureBox imagenMascota1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

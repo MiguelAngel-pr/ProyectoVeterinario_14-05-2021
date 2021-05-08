@@ -99,6 +99,7 @@
     <Compile Include="listaClientes.Designer.cs">
       <DependentUpon>listaClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validar.cs" />
     <Compile Include="ventanaAdmin.cs">
       <SubType>Form</SubType>
     </Compile>

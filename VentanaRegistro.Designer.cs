@@ -41,6 +41,8 @@ namespace ProyectoVeterinario_2021
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.botonVolver = new System.Windows.Forms.Button();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.textApellido = new System.Windows.Forms.TextBox();
             this.textTelefono = new System.Windows.Forms.TextBox();
@@ -52,8 +54,7 @@ namespace ProyectoVeterinario_2021
             this.textContraseña = new System.Windows.Forms.TextBox();
             this.textContraseña2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.botonVolver = new System.Windows.Forms.Button();
-            this.Logo = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -65,7 +66,7 @@ namespace ProyectoVeterinario_2021
             this.panel2.Controls.Add(this.botonRegistro);
             this.panel2.Location = new System.Drawing.Point(0, 461);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(485, 150);
+            this.panel2.Size = new System.Drawing.Size(465, 150);
             this.panel2.TabIndex = 8;
             // 
             // botonRegistro
@@ -73,7 +74,7 @@ namespace ProyectoVeterinario_2021
             this.botonRegistro.BackColor = System.Drawing.Color.PowderBlue;
             this.botonRegistro.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonRegistro.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.botonRegistro.Location = new System.Drawing.Point(165, 55);
+            this.botonRegistro.Location = new System.Drawing.Point(145, 53);
             this.botonRegistro.Name = "botonRegistro";
             this.botonRegistro.Size = new System.Drawing.Size(150, 50);
             this.botonRegistro.TabIndex = 4;
@@ -86,9 +87,9 @@ namespace ProyectoVeterinario_2021
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Quicksand", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.PowderBlue;
-            this.label1.Location = new System.Drawing.Point(76, 0);
+            this.label1.Location = new System.Drawing.Point(87, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 75);
+            this.label1.Size = new System.Drawing.Size(174, 108);
             this.label1.TabIndex = 9;
             this.label1.Text = "Registro";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -97,7 +98,7 @@ namespace ProyectoVeterinario_2021
             // 
             this.label2.Font = new System.Drawing.Font("Quicksand", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label2.Location = new System.Drawing.Point(75, 125);
+            this.label2.Location = new System.Drawing.Point(66, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 21);
             this.label2.TabIndex = 10;
@@ -108,7 +109,7 @@ namespace ProyectoVeterinario_2021
             // 
             this.label3.Font = new System.Drawing.Font("Quicksand", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label3.Location = new System.Drawing.Point(75, 165);
+            this.label3.Location = new System.Drawing.Point(66, 172);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 21);
             this.label3.TabIndex = 11;
@@ -119,7 +120,7 @@ namespace ProyectoVeterinario_2021
             // 
             this.label4.Font = new System.Drawing.Font("Quicksand", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label4.Location = new System.Drawing.Point(75, 245);
+            this.label4.Location = new System.Drawing.Point(66, 252);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 21);
             this.label4.TabIndex = 12;
@@ -130,7 +131,7 @@ namespace ProyectoVeterinario_2021
             // 
             this.label5.Font = new System.Drawing.Font("Quicksand", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label5.Location = new System.Drawing.Point(75, 205);
+            this.label5.Location = new System.Drawing.Point(66, 212);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 21);
             this.label5.TabIndex = 13;
@@ -141,7 +142,7 @@ namespace ProyectoVeterinario_2021
             // 
             this.label6.Font = new System.Drawing.Font("Quicksand", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label6.Location = new System.Drawing.Point(75, 320);
+            this.label6.Location = new System.Drawing.Point(66, 327);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 21);
             this.label6.TabIndex = 15;
@@ -152,7 +153,7 @@ namespace ProyectoVeterinario_2021
             // 
             this.label7.Font = new System.Drawing.Font("Quicksand", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label7.Location = new System.Drawing.Point(75, 280);
+            this.label7.Location = new System.Drawing.Point(66, 287);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 21);
             this.label7.TabIndex = 14;
@@ -163,7 +164,7 @@ namespace ProyectoVeterinario_2021
             // 
             this.label8.Font = new System.Drawing.Font("Quicksand", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label8.Location = new System.Drawing.Point(75, 361);
+            this.label8.Location = new System.Drawing.Point(66, 368);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 21);
             this.label8.TabIndex = 16;
@@ -173,51 +174,82 @@ namespace ProyectoVeterinario_2021
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.botonVolver);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Logo);
             this.panel1.Font = new System.Drawing.Font("Quicksand", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(485, 100);
+            this.panel1.Size = new System.Drawing.Size(485, 108);
             this.panel1.TabIndex = 17;
+            // 
+            // botonVolver
+            // 
+            this.botonVolver.BackColor = System.Drawing.Color.Transparent;
+            this.botonVolver.BackgroundImage = global::ProyectoVeterinario_2021.Properties.Resources.arrow;
+            this.botonVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonVolver.FlatAppearance.BorderSize = 0;
+            this.botonVolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botonVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botonVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonVolver.Location = new System.Drawing.Point(354, 37);
+            this.botonVolver.Name = "botonVolver";
+            this.botonVolver.Size = new System.Drawing.Size(41, 41);
+            this.botonVolver.TabIndex = 10;
+            this.botonVolver.UseVisualStyleBackColor = false;
+            this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
+            // 
+            // Logo
+            // 
+            this.Logo.BackColor = System.Drawing.Color.Transparent;
+            this.Logo.Image = global::ProyectoVeterinario_2021.Properties.Resources.veterinario;
+            this.Logo.Location = new System.Drawing.Point(6, 3);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(75, 75);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Logo.TabIndex = 1;
+            this.Logo.TabStop = false;
             // 
             // textNombre
             // 
             this.textNombre.BackColor = System.Drawing.Color.LightCyan;
             this.textNombre.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textNombre.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.textNombre.Location = new System.Drawing.Point(154, 125);
+            this.textNombre.Location = new System.Drawing.Point(145, 132);
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(250, 21);
             this.textNombre.TabIndex = 18;
+            this.textNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNombre_KeyPress);
             // 
             // textApellido
             // 
             this.textApellido.BackColor = System.Drawing.Color.LightCyan;
             this.textApellido.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textApellido.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.textApellido.Location = new System.Drawing.Point(154, 165);
+            this.textApellido.Location = new System.Drawing.Point(145, 172);
             this.textApellido.Name = "textApellido";
             this.textApellido.Size = new System.Drawing.Size(250, 21);
             this.textApellido.TabIndex = 19;
+            this.textApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textApellido_KeyPress);
             // 
             // textTelefono
             // 
             this.textTelefono.BackColor = System.Drawing.Color.LightCyan;
             this.textTelefono.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTelefono.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.textTelefono.Location = new System.Drawing.Point(154, 245);
+            this.textTelefono.Location = new System.Drawing.Point(145, 252);
             this.textTelefono.Name = "textTelefono";
             this.textTelefono.Size = new System.Drawing.Size(105, 21);
             this.textTelefono.TabIndex = 20;
+            this.textTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textTelefono_KeyPress);
             // 
             // textDNI
             // 
             this.textDNI.BackColor = System.Drawing.Color.LightCyan;
             this.textDNI.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textDNI.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.textDNI.Location = new System.Drawing.Point(302, 245);
+            this.textDNI.Location = new System.Drawing.Point(293, 252);
             this.textDNI.Name = "textDNI";
             this.textDNI.Size = new System.Drawing.Size(102, 21);
             this.textDNI.TabIndex = 22;
@@ -226,7 +258,7 @@ namespace ProyectoVeterinario_2021
             // 
             this.label9.Font = new System.Drawing.Font("Quicksand", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label9.Location = new System.Drawing.Point(265, 245);
+            this.label9.Location = new System.Drawing.Point(256, 252);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 21);
             this.label9.TabIndex = 21;
@@ -238,7 +270,7 @@ namespace ProyectoVeterinario_2021
             this.textDireccion1.BackColor = System.Drawing.Color.LightCyan;
             this.textDireccion1.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textDireccion1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.textDireccion1.Location = new System.Drawing.Point(154, 280);
+            this.textDireccion1.Location = new System.Drawing.Point(145, 287);
             this.textDireccion1.Name = "textDireccion1";
             this.textDireccion1.Size = new System.Drawing.Size(250, 21);
             this.textDireccion1.TabIndex = 24;
@@ -248,7 +280,7 @@ namespace ProyectoVeterinario_2021
             this.textCorreo.BackColor = System.Drawing.Color.LightCyan;
             this.textCorreo.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textCorreo.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.textCorreo.Location = new System.Drawing.Point(154, 205);
+            this.textCorreo.Location = new System.Drawing.Point(145, 212);
             this.textCorreo.Name = "textCorreo";
             this.textCorreo.Size = new System.Drawing.Size(250, 21);
             this.textCorreo.TabIndex = 23;
@@ -258,7 +290,7 @@ namespace ProyectoVeterinario_2021
             this.textDireccion2.BackColor = System.Drawing.Color.LightCyan;
             this.textDireccion2.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textDireccion2.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.textDireccion2.Location = new System.Drawing.Point(154, 320);
+            this.textDireccion2.Location = new System.Drawing.Point(145, 327);
             this.textDireccion2.Name = "textDireccion2";
             this.textDireccion2.Size = new System.Drawing.Size(250, 21);
             this.textDireccion2.TabIndex = 25;
@@ -268,7 +300,7 @@ namespace ProyectoVeterinario_2021
             this.textContraseña.BackColor = System.Drawing.Color.LightCyan;
             this.textContraseña.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textContraseña.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.textContraseña.Location = new System.Drawing.Point(154, 360);
+            this.textContraseña.Location = new System.Drawing.Point(145, 367);
             this.textContraseña.Name = "textContraseña";
             this.textContraseña.Size = new System.Drawing.Size(250, 21);
             this.textContraseña.TabIndex = 26;
@@ -278,7 +310,7 @@ namespace ProyectoVeterinario_2021
             this.textContraseña2.BackColor = System.Drawing.Color.LightCyan;
             this.textContraseña2.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textContraseña2.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.textContraseña2.Location = new System.Drawing.Point(154, 400);
+            this.textContraseña2.Location = new System.Drawing.Point(145, 407);
             this.textContraseña2.Name = "textContraseña2";
             this.textContraseña2.Size = new System.Drawing.Size(250, 21);
             this.textContraseña2.TabIndex = 28;
@@ -288,46 +320,31 @@ namespace ProyectoVeterinario_2021
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Quicksand", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label10.Location = new System.Drawing.Point(12, 393);
+            this.label10.Location = new System.Drawing.Point(20, 407);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(141, 36);
+            this.label10.Size = new System.Drawing.Size(119, 21);
             this.label10.TabIndex = 29;
-            this.label10.Text = "Confirmar Contraseña";
+            this.label10.Text = "Repetir Contraseña";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // botonVolver
+            // label11
             // 
-            this.botonVolver.BackColor = System.Drawing.Color.Transparent;
-            this.botonVolver.BackgroundImage = global::ProyectoVeterinario_2021.Properties.Resources.arrow;
-            this.botonVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonVolver.FlatAppearance.BorderSize = 0;
-            this.botonVolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.botonVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.botonVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonVolver.Location = new System.Drawing.Point(359, 25);
-            this.botonVolver.Name = "botonVolver";
-            this.botonVolver.Size = new System.Drawing.Size(41, 41);
-            this.botonVolver.TabIndex = 10;
-            this.botonVolver.UseVisualStyleBackColor = false;
-            this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
-            // 
-            // Logo
-            // 
-            this.Logo.BackColor = System.Drawing.Color.Transparent;
-            this.Logo.Image = global::ProyectoVeterinario_2021.Properties.Resources.veterinario;
-            this.Logo.Location = new System.Drawing.Point(0, 0);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(75, 75);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Logo.TabIndex = 1;
-            this.Logo.TabStop = false;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.PowderBlue;
+            this.label11.Location = new System.Drawing.Point(3, 81);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 22);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "We❤Animals";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // VentanaRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
-            this.ClientSize = new System.Drawing.Size(484, 611);
+            this.ClientSize = new System.Drawing.Size(459, 611);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textContraseña2);
             this.Controls.Add(this.textContraseña);
@@ -348,7 +365,10 @@ namespace ProyectoVeterinario_2021
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "VentanaRegistro";
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -384,5 +404,6 @@ namespace ProyectoVeterinario_2021
         private System.Windows.Forms.TextBox textContraseña2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button botonVolver;
+        private System.Windows.Forms.Label label11;
     }
 }

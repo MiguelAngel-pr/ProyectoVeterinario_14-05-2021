@@ -65,6 +65,9 @@
             this.ClientSize = new System.Drawing.Size(434, 461);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.botonVerClientes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ventanaEmpleado";
             this.Text = "ventanaEmpleado";
             this.ResumeLayout(false);

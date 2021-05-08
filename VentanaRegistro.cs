@@ -13,6 +13,7 @@ namespace ProyectoVeterinario_2021
 {
     public partial class VentanaRegistro : Form
     {
+        Boolean registro = true;
         public VentanaRegistro()
         {
             InitializeComponent();
@@ -31,18 +32,45 @@ namespace ProyectoVeterinario_2021
 
         private void botonRegistro_Click(object sender, EventArgs e)
         {
-            String passHasheada = BCrypt.Net.BCrypt.HashPassword(textContraseña.Text, BCrypt.Net.BCrypt.GenerateSalt());
-
-            Conexion miConexion = new Conexion();
-            Boolean resultado = miConexion.insertaUsuario(textDNI.Text, textNombre.Text, textApellido.Text, textTelefono.Text, textCorreo.Text, textDireccion1.Text, textDireccion2.Text, passHasheada);
-            if (resultado)
+            registro = true;
+            String email = textCorreo.Text;
+            if (!Validar.validarEmail(email) || textContraseña.Text != textContraseña2.Text || textDNI.Text.Length != 9 || textTelefono.Text.Length != 9 || !textDireccion1.Text.Contains("Calle") && !textDireccion1.Text.Contains("Avenida") || textCorreo.Text.Contains("@admin.com") || textCorreo.Text.Contains("@weloveanimals.com"))
             {
-                MessageBox.Show("INSERTADO CORRECTAMENTE");
+                registro = false;
             }
-            else
+            if (registro)
+            {
+                String passHasheada = BCrypt.Net.BCrypt.HashPassword(textContraseña.Text, BCrypt.Net.BCrypt.GenerateSalt());
+
+                Conexion miConexion = new Conexion();
+                Boolean resultado = miConexion.insertaUsuario(textDNI.Text, textNombre.Text, textApellido.Text, textTelefono.Text, textCorreo.Text, textDireccion1.Text, textDireccion2.Text, passHasheada);
+                if (resultado)
+                {
+                    MessageBox.Show("INSERTADO CORRECTAMENTE");
+                }
+                else
+                {
+                    MessageBox.Show("HA OCURRIDO UN ERROR INESPERADO, INTENTALO MÁS TARDE");
+                }
+            }
+            else 
             {
                 MessageBox.Show("HA OCURRIDO UN ERROR INESPERADO, INTENTALO MÁS TARDE");
             }
+        }
+        private void textNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloLetras(e);
+        }
+
+        private void textApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloLetras(e);
+        }
+
+        private void textTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloNumeros(e);
         }
     }
 }
