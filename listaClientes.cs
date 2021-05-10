@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,17 +21,27 @@ namespace ProyectoVeterinario_2021
         public listaClientes()
         {
             InitializeComponent();
-            //misClientes = miConexion.getLista();
-            //listaUsuarios.DataSource = misClientes;
-        }
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            Application.Exit(); //cierra la aplicación completamente.
+            misClientes = miConexion.getLista();
+            listaUsuarios.DataSource = misClientes;
         }
 
-        private void textEmail_TextChanged(object sender, EventArgs e)
+        private void botonBusqueda_Click(object sender, EventArgs e)
         {
-
+            String busqueda = textBusqueda.Text.ToUpperInvariant();
+            String dato = comboBox1.Text;
+            //Metodo para quitar acentos
+            if (dato == "Nombre" || dato == "Apellido")
+            {
+                String _busqueda = busqueda.Normalize(NormalizationForm.FormD);
+                Regex reg = new Regex("[^a-zA-Z0-9 ]");
+                String busquedaSinAcentos = reg.Replace(_busqueda, "");
+                misClientes = miConexion.getListaPorDato(dato, busquedaSinAcentos);
+            }
+            else
+            {
+                misClientes = miConexion.getListaPorDato(dato, busqueda);
+            }
+            listaUsuarios.DataSource = misClientes;
         }
     }
 }

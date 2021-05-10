@@ -163,9 +163,9 @@ namespace ProyectoVeterinario_2021
             // 
             this.Logo.BackColor = System.Drawing.Color.Transparent;
             this.Logo.Image = global::ProyectoVeterinario_2021.Properties.Resources.veterinario;
-            this.Logo.Location = new System.Drawing.Point(265, 50);
+            this.Logo.Location = new System.Drawing.Point(262, 50);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(120, 120);
+            this.Logo.Size = new System.Drawing.Size(125, 125);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Logo.TabIndex = 0;
             this.Logo.TabStop = false;
@@ -184,11 +184,11 @@ namespace ProyectoVeterinario_2021
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Quicksand Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Quicksand", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label3.Location = new System.Drawing.Point(251, 173);
+            this.label3.Location = new System.Drawing.Point(262, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 32);
+            this.label3.Size = new System.Drawing.Size(125, 38);
             this.label3.TabIndex = 12;
             this.label3.Text = "We❤Animals";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

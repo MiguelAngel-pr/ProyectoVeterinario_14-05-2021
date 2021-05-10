@@ -28,59 +28,109 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(listaClientes));
             this.listaUsuarios = new System.Windows.Forms.DataGridView();
-            this.textEmail = new System.Windows.Forms.TextBox();
-            this.botonLogin = new System.Windows.Forms.Button();
+            this.textBusqueda = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.botonBusqueda = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaUsuarios)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listaUsuarios
             // 
             this.listaUsuarios.BackgroundColor = System.Drawing.Color.LightCyan;
             this.listaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listaUsuarios.Location = new System.Drawing.Point(13, 107);
+            this.listaUsuarios.Location = new System.Drawing.Point(13, 108);
             this.listaUsuarios.Name = "listaUsuarios";
-            this.listaUsuarios.Size = new System.Drawing.Size(522, 249);
+            this.listaUsuarios.Size = new System.Drawing.Size(522, 248);
             this.listaUsuarios.TabIndex = 0;
             // 
-            // textEmail
+            // textBusqueda
             // 
-            this.textEmail.BackColor = System.Drawing.Color.LightCyan;
-            this.textEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEmail.ForeColor = System.Drawing.Color.Silver;
-            this.textEmail.Location = new System.Drawing.Point(13, 42);
-            this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(478, 38);
-            this.textEmail.TabIndex = 5;
-            this.textEmail.UseWaitCursor = true;
-            this.textEmail.TextChanged += new System.EventHandler(this.textEmail_TextChanged);
+            this.textBusqueda.BackColor = System.Drawing.Color.LightCyan;
+            this.textBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBusqueda.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.textBusqueda.Location = new System.Drawing.Point(13, 42);
+            this.textBusqueda.Name = "textBusqueda";
+            this.textBusqueda.Size = new System.Drawing.Size(337, 38);
+            this.textBusqueda.TabIndex = 5;
+            this.textBusqueda.UseWaitCursor = true;
             // 
-            // botonLogin
+            // comboBox1
             // 
-            this.botonLogin.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.botonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonLogin.ForeColor = System.Drawing.Color.PowderBlue;
-            this.botonLogin.Location = new System.Drawing.Point(497, 42);
-            this.botonLogin.Name = "botonLogin";
-            this.botonLogin.Size = new System.Drawing.Size(38, 38);
-            this.botonLogin.TabIndex = 6;
-            this.botonLogin.UseVisualStyleBackColor = false;
+            this.comboBox1.BackColor = System.Drawing.Color.PowderBlue;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Quicksand", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.IntegralHeight = false;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Nombre",
+            "Apellido",
+            "Email",
+            "DNI",
+            "Lista Completa"});
+            this.comboBox1.Location = new System.Drawing.Point(398, 48);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(147, 36);
+            this.comboBox1.TabIndex = 7;
+            // 
+            // botonBusqueda
+            // 
+            this.botonBusqueda.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.botonBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonBusqueda.ForeColor = System.Drawing.Color.PowderBlue;
+            this.botonBusqueda.Location = new System.Drawing.Point(344, 41);
+            this.botonBusqueda.Name = "botonBusqueda";
+            this.botonBusqueda.Size = new System.Drawing.Size(38, 39);
+            this.botonBusqueda.TabIndex = 8;
+            this.botonBusqueda.Text = "🠔";
+            this.botonBusqueda.UseVisualStyleBackColor = false;
+            this.botonBusqueda.Click += new System.EventHandler(this.botonBusqueda_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Location = new System.Drawing.Point(-10, -7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(566, 101);
+            this.panel1.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.label3.Font = new System.Drawing.Font("Quicksand", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.PowderBlue;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Location = new System.Drawing.Point(23, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(200, 32);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Buscador de Clientes:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // listaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PowderBlue;
+            this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(547, 368);
-            this.Controls.Add(this.botonLogin);
-            this.Controls.Add(this.textEmail);
+            this.Controls.Add(this.botonBusqueda);
+            this.Controls.Add(this.textBusqueda);
             this.Controls.Add(this.listaUsuarios);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "listaClientes";
-            this.Text = "listaClientes";
             ((System.ComponentModel.ISupportInitialize)(this.listaUsuarios)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,7 +139,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView listaUsuarios;
-        private System.Windows.Forms.TextBox textEmail;
-        private System.Windows.Forms.Button botonLogin;
+        private System.Windows.Forms.TextBox textBusqueda;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button botonBusqueda;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
     }
 }

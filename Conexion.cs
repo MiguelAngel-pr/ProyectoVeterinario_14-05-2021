@@ -51,7 +51,7 @@ namespace ProyectoVeterinario_2021
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("INSERT INTO cliente (Id_cliente, DNI, nombre, apellido, telefono, email, direccion1, direccion2, password, perfil) VALUES (null, @_DNI, @_nombre, @_apellido, @_telefono, @_email, @_direccion1, @_direccion2, @_password, 0)", conexion);
+                MySqlCommand consulta = new MySqlCommand("INSERT INTO cliente (Id_cliente, DNI, nombre, apellido, telefono, email, direccion1, direccion2, password) VALUES (null, @_DNI, @_nombre, @_apellido, @_telefono, @_email, @_direccion1, @_direccion2, @_password)", conexion);
                 consulta.Parameters.AddWithValue("@_DNI", _DNI);
                 consulta.Parameters.AddWithValue("@_nombre", _nombre);
                 consulta.Parameters.AddWithValue("@_apellido", _apellido);
@@ -96,12 +96,12 @@ namespace ProyectoVeterinario_2021
             }
         }
 
-        /*public DataTable getLista()
+        public DataTable getLista()
         {
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM cliente", conexion);
+                MySqlCommand consulta = new MySqlCommand("SELECT DNI, nombre, apellido, telefono, email FROM cliente", conexion);
                 MySqlDataReader resultado = consulta.ExecuteReader(); //guardo el resultado de la query
                 DataTable clientes = new DataTable(); //formato que espera el datagridview
                 clientes.Load(resultado);  //convierte MysqlDataReader en DataTable
@@ -112,6 +112,49 @@ namespace ProyectoVeterinario_2021
             {
                 throw e;
             }
-        }*/
+        }
+
+        public DataTable getListaPorDato(String _dato, String _busqueda)
+        {
+            try
+            {
+                DataTable cliente = new DataTable(); //formato que espera el datagridview
+                conexion.Open();
+                switch (_dato)
+                {
+                    case "DNI":
+                        MySqlCommand consulta = new MySqlCommand("SELECT DNI, nombre, apellido, telefono, email FROM cliente WHERE DNI='" + _busqueda + "'", conexion);
+                        MySqlDataReader resultado = consulta.ExecuteReader(); //guardo el resultado de la query
+                        cliente.Load(resultado);  //convierte MysqlDataReader en DataTable
+                        break;
+                    case "Nombre":
+                        MySqlCommand consulta2 = new MySqlCommand("SELECT DNI, nombre, apellido, telefono, email FROM cliente WHERE nombre='" + _busqueda + "'", conexion);
+                        MySqlDataReader resultado2 = consulta2.ExecuteReader(); //guardo el resultado de la query
+                        cliente.Load(resultado2);  //convierte MysqlDataReader en DataTable
+                        break;
+                    case "Apellido":
+                        MySqlCommand consulta3 = new MySqlCommand("SELECT DNI, nombre, apellido, telefono, email FROM cliente WHERE apellido='" + _busqueda + "'", conexion);
+                        MySqlDataReader resultado3 = consulta3.ExecuteReader(); //guardo el resultado de la query
+                        cliente.Load(resultado3);  //convierte MysqlDataReader en DataTable
+                        break;
+                    case "Email":
+                        MySqlCommand consulta4 = new MySqlCommand("SELECT DNI, nombre, apellido, telefono, email FROM cliente WHERE email='" + _busqueda + "'", conexion);
+                        MySqlDataReader resultado4 = consulta4.ExecuteReader(); //guardo el resultado de la query
+                        cliente.Load(resultado4);  //convierte MysqlDataReader en DataTable
+                        break;
+                    case "Lista Completa":
+                        MySqlCommand consulta5 = new MySqlCommand("SELECT DNI, nombre, apellido, telefono, email FROM cliente", conexion);
+                        MySqlDataReader resultado5 = consulta5.ExecuteReader(); //guardo el resultado de la query
+                        cliente.Load(resultado5);  //convierte MysqlDataReader en DataTable
+                        break;
+                }
+                conexion.Close();
+                return cliente;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
     }
 }

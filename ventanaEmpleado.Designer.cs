@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventanaEmpleado));
             this.botonVerClientes = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -35,9 +36,9 @@
             // botonVerClientes
             // 
             this.botonVerClientes.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.botonVerClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonVerClientes.Font = new System.Drawing.Font("Quicksand", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonVerClientes.ForeColor = System.Drawing.Color.PowderBlue;
-            this.botonVerClientes.Location = new System.Drawing.Point(26, 159);
+            this.botonVerClientes.Location = new System.Drawing.Point(30, 29);
             this.botonVerClientes.Name = "botonVerClientes";
             this.botonVerClientes.Size = new System.Drawing.Size(156, 149);
             this.botonVerClientes.TabIndex = 2;
@@ -48,9 +49,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Quicksand", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.PowderBlue;
-            this.button1.Location = new System.Drawing.Point(242, 159);
+            this.button1.Location = new System.Drawing.Point(246, 29);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 149);
             this.button1.TabIndex = 3;
@@ -62,14 +63,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
-            this.ClientSize = new System.Drawing.Size(434, 461);
+            this.ClientSize = new System.Drawing.Size(434, 201);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.botonVerClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ventanaEmpleado";
-            this.Text = "ventanaEmpleado";
             this.ResumeLayout(false);
 
         }

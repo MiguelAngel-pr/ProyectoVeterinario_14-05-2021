@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventanaAdmin));
             this.botonCrearCuenta = new System.Windows.Forms.Button();
             this.botonVerClientes = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -35,21 +36,22 @@
             // botonCrearCuenta
             // 
             this.botonCrearCuenta.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.botonCrearCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonCrearCuenta.Font = new System.Drawing.Font("Quicksand", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonCrearCuenta.ForeColor = System.Drawing.Color.PowderBlue;
-            this.botonCrearCuenta.Location = new System.Drawing.Point(250, 151);
+            this.botonCrearCuenta.Location = new System.Drawing.Point(250, 26);
             this.botonCrearCuenta.Name = "botonCrearCuenta";
             this.botonCrearCuenta.Size = new System.Drawing.Size(156, 149);
             this.botonCrearCuenta.TabIndex = 5;
-            this.botonCrearCuenta.Text = "Crear Cuentas Empleados";
+            this.botonCrearCuenta.Text = "Registrar Empleados";
             this.botonCrearCuenta.UseVisualStyleBackColor = false;
+            this.botonCrearCuenta.Click += new System.EventHandler(this.botonCrearCuenta_Click);
             // 
             // botonVerClientes
             // 
             this.botonVerClientes.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.botonVerClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonVerClientes.Font = new System.Drawing.Font("Quicksand", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonVerClientes.ForeColor = System.Drawing.Color.PowderBlue;
-            this.botonVerClientes.Location = new System.Drawing.Point(27, 151);
+            this.botonVerClientes.Location = new System.Drawing.Point(27, 26);
             this.botonVerClientes.Name = "botonVerClientes";
             this.botonVerClientes.Size = new System.Drawing.Size(156, 149);
             this.botonVerClientes.TabIndex = 4;
@@ -62,14 +64,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
-            this.ClientSize = new System.Drawing.Size(434, 461);
+            this.ClientSize = new System.Drawing.Size(434, 201);
             this.Controls.Add(this.botonCrearCuenta);
             this.Controls.Add(this.botonVerClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ventanaAdmin";
-            this.Text = "ventanaAdmin";
             this.ResumeLayout(false);
 
         }

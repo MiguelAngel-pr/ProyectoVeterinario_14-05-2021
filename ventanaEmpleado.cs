@@ -24,7 +24,9 @@ namespace ProyectoVeterinario_2021
 
         private void botonVerClientes_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            listaClientes ventana = new listaClientes();
+            ventana.Show();
         }
 
         public void asignaPerfil(String correo)
