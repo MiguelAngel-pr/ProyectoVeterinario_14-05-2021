@@ -28,8 +28,11 @@ namespace ProyectoVeterinario_2021
             if (textEmail.Text.Equals("Introduzca el email"))
             {
                 textEmail.Text = "";
-                textEmail.ForeColor = Color.LightSeaGreen;
             }
+        }
+        private void textEmail_TextChanged(object sender, EventArgs e)
+        {
+            textEmail.ForeColor = Color.LightSeaGreen;
         }
 
         private void textContraseña_Click(object sender, EventArgs e)
@@ -38,8 +41,11 @@ namespace ProyectoVeterinario_2021
             if (textContraseña.Text.Equals("Introduzca la contraseña"))
             {
                 textContraseña.Text = "";
-                textContraseña.ForeColor = Color.LightSeaGreen;
             }
+        }
+        private void textContraseña_TextChanged(object sender, EventArgs e)
+        {
+            textContraseña.ForeColor = Color.LightSeaGreen;
         }
         public void botonLogin_Click(object sender, EventArgs e)
         {

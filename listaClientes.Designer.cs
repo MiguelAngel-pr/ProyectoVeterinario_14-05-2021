@@ -63,7 +63,7 @@
             // 
             this.comboBox1.BackColor = System.Drawing.Color.PowderBlue;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Quicksand", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.ForeColor = System.Drawing.Color.DarkCyan;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.IntegralHeight = false;
@@ -75,7 +75,7 @@
             "Lista Completa"});
             this.comboBox1.Location = new System.Drawing.Point(398, 48);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(147, 36);
+            this.comboBox1.Size = new System.Drawing.Size(147, 32);
             this.comboBox1.TabIndex = 7;
             // 
             // botonBusqueda
@@ -87,7 +87,7 @@
             this.botonBusqueda.Name = "botonBusqueda";
             this.botonBusqueda.Size = new System.Drawing.Size(38, 39);
             this.botonBusqueda.TabIndex = 8;
-            this.botonBusqueda.Text = "🠔";
+            this.botonBusqueda.Text = "<";
             this.botonBusqueda.UseVisualStyleBackColor = false;
             this.botonBusqueda.Click += new System.EventHandler(this.botonBusqueda_Click);
             // 
@@ -104,7 +104,7 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.label3.Font = new System.Drawing.Font("Quicksand", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.PowderBlue;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.Location = new System.Drawing.Point(23, 14);

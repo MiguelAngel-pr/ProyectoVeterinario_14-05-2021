@@ -42,8 +42,9 @@ namespace ProyectoVeterinario_2021
             String email = textCorreo.Text;
             Conexion miConexion = new Conexion();
             if (!Validar.validarEmail(email) || textContraseña.Text != textContraseña2.Text || textDNI.Text.Length != 9 || textTelefono.Text.Length != 9 
-                || !textDireccion1.Text.Contains("Calle ") && !textDireccion1.Text.Contains("Avenida ") || textCorreo.Text.Contains("@admin.com") 
-                || !empleado && textCorreo.Text.Contains("@weloveanimals.com") || textDNI.Text != textDNI.Text.ToUpperInvariant() || textNombre.Text.Length < 3 || textApellido.Text.Length < 3)
+                || !textDireccion1.Text.Substring(0, 6).Contains("Calle ") && !textDireccion1.Text.Substring(0, 8).Contains("Avenida ") || textCorreo.Text.Contains("@admin.com") 
+                || !empleado && textCorreo.Text.Contains("@weloveanimals.com") || textDNI.Text != textDNI.Text.ToUpperInvariant() || textNombre.Text.Length < 3 || textApellido.Text.Length < 3
+                || textDireccion2.Text.Length > 0 && !textDireccion2.Text.Substring(0, 7).Contains("Portal ") || textDireccion2.Text.Length > 0 && !textDireccion2.Text.Substring(0, 5).Contains("Piso "))
             {
                 registro = false;
             }
@@ -87,6 +88,45 @@ namespace ProyectoVeterinario_2021
         private void textTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.soloNumeros(e);
+        }
+
+        private void textDNI_TextChanged(object sender, EventArgs e)
+        {
+            textDNI.ForeColor = Color.LightSeaGreen;
+        }
+
+        private void textDNI_Click(object sender, EventArgs e)
+        {
+            if (textDNI.Text.Equals("Ex: 00000000X"))
+            {
+                textDNI.Text = "";
+            }
+        }
+
+        private void textDireccion1_TextChanged(object sender, EventArgs e)
+        {
+            textDireccion1.ForeColor = Color.LightSeaGreen;
+        }
+
+        private void textDireccion1_Click(object sender, EventArgs e)
+        {
+            if (textDireccion1.Text.Equals("Ex: Calle/Avenida XXX"))
+            {
+                textDireccion1.Text = "";
+            }
+        }
+
+        private void textDireccion2_TextChanged(object sender, EventArgs e)
+        {
+            textDireccion2.ForeColor = Color.LightSeaGreen;
+        }
+
+        private void textDireccion2_Click(object sender, EventArgs e)
+        {
+            if (textDireccion2.Text.Equals("Ex: Portal/Piso XXX"))
+            {
+                textDireccion2.Text = "";
+            }
         }
     }
 }

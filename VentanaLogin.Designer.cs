@@ -52,33 +52,35 @@ namespace ProyectoVeterinario_2021
             // textEmail
             // 
             this.textEmail.BackColor = System.Drawing.Color.LightCyan;
-            this.textEmail.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEmail.ForeColor = System.Drawing.Color.Silver;
             this.textEmail.Location = new System.Drawing.Point(225, 230);
             this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(200, 21);
+            this.textEmail.Size = new System.Drawing.Size(200, 20);
             this.textEmail.TabIndex = 4;
             this.textEmail.Text = "Introduzca el email";
             this.textEmail.UseWaitCursor = true;
             this.textEmail.Click += new System.EventHandler(this.textEmail_Click);
+            this.textEmail.TextChanged += new System.EventHandler(this.textEmail_TextChanged);
             // 
             // textContraseña
             // 
             this.textContraseña.BackColor = System.Drawing.Color.LightCyan;
-            this.textContraseña.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textContraseña.ForeColor = System.Drawing.Color.Silver;
             this.textContraseña.Location = new System.Drawing.Point(225, 267);
             this.textContraseña.Name = "textContraseña";
-            this.textContraseña.Size = new System.Drawing.Size(200, 21);
+            this.textContraseña.Size = new System.Drawing.Size(200, 20);
             this.textContraseña.TabIndex = 4;
             this.textContraseña.Text = "Introduzca la contraseña";
             this.textContraseña.UseWaitCursor = true;
             this.textContraseña.Click += new System.EventHandler(this.textContraseña_Click);
+            this.textContraseña.TextChanged += new System.EventHandler(this.textContraseña_TextChanged);
             // 
             // botonLogin
             // 
             this.botonLogin.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.botonLogin.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonLogin.ForeColor = System.Drawing.Color.PowderBlue;
             this.botonLogin.Location = new System.Drawing.Point(275, 334);
             this.botonLogin.Name = "botonLogin";
@@ -90,7 +92,7 @@ namespace ProyectoVeterinario_2021
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Quicksand", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.label1.Location = new System.Drawing.Point(225, 381);
             this.label1.Name = "label1";
@@ -101,7 +103,7 @@ namespace ProyectoVeterinario_2021
             // 
             // linkRegistro
             // 
-            this.linkRegistro.Font = new System.Drawing.Font("Quicksand", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkRegistro.LinkColor = System.Drawing.Color.DarkCyan;
             this.linkRegistro.Location = new System.Drawing.Point(275, 411);
             this.linkRegistro.Name = "linkRegistro";
@@ -172,7 +174,7 @@ namespace ProyectoVeterinario_2021
             // 
             // checkBoxContraseña
             // 
-            this.checkBoxContraseña.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxContraseña.ForeColor = System.Drawing.Color.DarkCyan;
             this.checkBoxContraseña.Location = new System.Drawing.Point(431, 267);
             this.checkBoxContraseña.Name = "checkBoxContraseña";
@@ -184,7 +186,7 @@ namespace ProyectoVeterinario_2021
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Quicksand", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkCyan;
             this.label3.Location = new System.Drawing.Point(262, 178);
             this.label3.Name = "label3";
