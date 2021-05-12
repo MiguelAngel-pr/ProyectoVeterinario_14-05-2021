@@ -23,8 +23,9 @@ namespace ProyectoVeterinario_2021
         }
         private void botonVerClientes_Click(object sender, EventArgs e)
         {
-            listaClientes ventana = new listaClientes();
-            ventana.Show();
+            listaClientes ventana2 = new listaClientes();
+            ventana2.cambio();
+            ventana2.Show();
         }
         public void asignaPerfil(String correo)
         {
@@ -33,7 +34,7 @@ namespace ProyectoVeterinario_2021
 
         private void botonCrearCuenta_Click(object sender, EventArgs e)
         {
-            VentanaRegistro ventana = new VentanaRegistro();
+            ventanaRegistro ventana = new ventanaRegistro();
             ventana.cambio();
             ventana.Show();
         }

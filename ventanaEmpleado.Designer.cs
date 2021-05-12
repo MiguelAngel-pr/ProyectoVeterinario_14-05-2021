@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventanaEmpleado));
             this.botonVerClientes = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.botonCitas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botonVerClientes
@@ -46,17 +46,18 @@
             this.botonVerClientes.UseVisualStyleBackColor = false;
             this.botonVerClientes.Click += new System.EventHandler(this.botonVerClientes_Click);
             // 
-            // button1
+            // botonCitas
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button1.Font = new System.Drawing.Font("Quicksand", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.PowderBlue;
-            this.button1.Location = new System.Drawing.Point(246, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 149);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Citas Pendientes";
-            this.button1.UseVisualStyleBackColor = false;
+            this.botonCitas.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.botonCitas.Font = new System.Drawing.Font("Quicksand", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonCitas.ForeColor = System.Drawing.Color.PowderBlue;
+            this.botonCitas.Location = new System.Drawing.Point(246, 29);
+            this.botonCitas.Name = "botonCitas";
+            this.botonCitas.Size = new System.Drawing.Size(156, 149);
+            this.botonCitas.TabIndex = 3;
+            this.botonCitas.Text = "Citas Pendientes";
+            this.botonCitas.UseVisualStyleBackColor = false;
+            this.botonCitas.Click += new System.EventHandler(this.botonCitas_Click);
             // 
             // ventanaEmpleado
             // 
@@ -64,7 +65,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(434, 201);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.botonCitas);
             this.Controls.Add(this.botonVerClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -78,6 +79,6 @@
         #endregion
 
         private System.Windows.Forms.Button botonVerClientes;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button botonCitas;
     }
 }

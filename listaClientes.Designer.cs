@@ -45,17 +45,17 @@
             this.listaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaUsuarios.Location = new System.Drawing.Point(13, 108);
             this.listaUsuarios.Name = "listaUsuarios";
-            this.listaUsuarios.Size = new System.Drawing.Size(522, 248);
+            this.listaUsuarios.Size = new System.Drawing.Size(534, 251);
             this.listaUsuarios.TabIndex = 0;
             // 
             // textBusqueda
             // 
             this.textBusqueda.BackColor = System.Drawing.Color.LightCyan;
-            this.textBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBusqueda.Font = new System.Drawing.Font("Quicksand", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBusqueda.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.textBusqueda.Location = new System.Drawing.Point(13, 42);
             this.textBusqueda.Name = "textBusqueda";
-            this.textBusqueda.Size = new System.Drawing.Size(337, 38);
+            this.textBusqueda.Size = new System.Drawing.Size(337, 37);
             this.textBusqueda.TabIndex = 5;
             this.textBusqueda.UseWaitCursor = true;
             // 
@@ -63,7 +63,7 @@
             // 
             this.comboBox1.BackColor = System.Drawing.Color.PowderBlue;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Quicksand", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.ForeColor = System.Drawing.Color.DarkCyan;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.IntegralHeight = false;
@@ -73,9 +73,9 @@
             "Email",
             "DNI",
             "Lista Completa"});
-            this.comboBox1.Location = new System.Drawing.Point(398, 48);
+            this.comboBox1.Location = new System.Drawing.Point(398, 49);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(147, 32);
+            this.comboBox1.Size = new System.Drawing.Size(159, 36);
             this.comboBox1.TabIndex = 7;
             // 
             // botonBusqueda
@@ -98,18 +98,18 @@
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Location = new System.Drawing.Point(-10, -7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(566, 101);
+            this.panel1.Size = new System.Drawing.Size(575, 101);
             this.panel1.TabIndex = 9;
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Quicksand", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.PowderBlue;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.Location = new System.Drawing.Point(23, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(200, 32);
+            this.label3.Size = new System.Drawing.Size(224, 32);
             this.label3.TabIndex = 13;
             this.label3.Text = "Buscador de Clientes:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -119,7 +119,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(547, 368);
+            this.ClientSize = new System.Drawing.Size(559, 371);
             this.Controls.Add(this.botonBusqueda);
             this.Controls.Add(this.textBusqueda);
             this.Controls.Add(this.listaUsuarios);

@@ -24,7 +24,6 @@ namespace ProyectoVeterinario_2021
 
         private void botonVerClientes_Click(object sender, EventArgs e)
         {
-            this.Hide();
             listaClientes ventana = new listaClientes();
             ventana.Show();
         }
@@ -32,6 +31,12 @@ namespace ProyectoVeterinario_2021
         public void asignaPerfil(String correo)
         {
             DataTable perfilElegido = miConexion.getPerfil(correo);
+        }
+
+        private void botonCitas_Click(object sender, EventArgs e)
+        {
+            citasPendientes ventana = new citasPendientes();
+            ventana.Show();
         }
     }
 }

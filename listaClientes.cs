@@ -18,13 +18,27 @@ namespace ProyectoVeterinario_2021
 
         DataTable misClientes = new DataTable(); //variable que almacena el array de dos 
                                                  //dimensiones resultado de la consulta
+        Boolean admin = false;
         public listaClientes()
         {
             InitializeComponent();
-            misClientes = miConexion.getLista();
+            if (admin == false)
+            {
+                misClientes = miConexion.getListaClientes();
+            }
+            else
+            {
+                misClientes = miConexion.getListaUsuarios();
+            }
             listaUsuarios.DataSource = misClientes;
         }
-
+        public void cambio()
+        {
+            admin = true;
+            label3.Text = "Buscador de Usuarios";
+            misClientes = miConexion.getListaUsuarios();
+            listaUsuarios.DataSource = misClientes;
+        }
         private void botonBusqueda_Click(object sender, EventArgs e)
         {
             String busqueda = textBusqueda.Text.ToUpperInvariant();
@@ -35,13 +49,28 @@ namespace ProyectoVeterinario_2021
                 String _busqueda = busqueda.Normalize(NormalizationForm.FormD);
                 Regex reg = new Regex("[^a-zA-Z0-9 ]");
                 String busquedaSinAcentos = reg.Replace(_busqueda, "");
-                misClientes = miConexion.getListaPorDato(dato, busquedaSinAcentos);
+                if (!admin)
+                {
+                    misClientes = miConexion.getListaPorDatoCliente(dato, busquedaSinAcentos);
+                }
+                else
+                {
+                    misClientes = miConexion.getListaPorDatoUsuario(dato, busquedaSinAcentos);
+                }
             }
             else
             {
-                misClientes = miConexion.getListaPorDato(dato, busqueda);
+                if (!admin)
+                {
+                    misClientes = miConexion.getListaPorDatoCliente(dato, busqueda);
+                }
+                else
+                {
+                    misClientes = miConexion.getListaPorDatoUsuario(dato, busqueda);
+                }
             }
             listaUsuarios.DataSource = misClientes;
+            textBusqueda.Text = "";
         }
     }
 }

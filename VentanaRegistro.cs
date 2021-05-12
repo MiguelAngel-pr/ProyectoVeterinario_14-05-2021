@@ -12,11 +12,12 @@ using BCrypt.Net;
 
 namespace ProyectoVeterinario_2021
 {
-    public partial class VentanaRegistro : Form
+    public partial class ventanaRegistro : Form
     {
         Boolean registro = true;
         Boolean empleado = false;
-        public VentanaRegistro()
+        int perfil = 0;
+        public ventanaRegistro()
         {
             InitializeComponent();
         }
@@ -28,11 +29,12 @@ namespace ProyectoVeterinario_2021
         {
             empleado = true;
             label1.Text = "Registro Empleado";
+            perfil = 1;
         }
         private void botonVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
-            VentanaLogin ventana = new VentanaLogin();
+            ventanaLogin ventana = new ventanaLogin();
             ventana.Show();
         }
 
@@ -60,7 +62,7 @@ namespace ProyectoVeterinario_2021
                 String nombreSinAcentos = reg.Replace(nombre, "");
                 String apellidoSinAcentos = reg.Replace(apellido, "");
 
-                Boolean resultado = miConexion.insertaUsuario(textDNI.Text, nombreSinAcentos.ToUpperInvariant(), apellidoSinAcentos.ToUpperInvariant(), textTelefono.Text, textCorreo.Text, textDireccion1.Text, textDireccion2.Text, passHasheada);
+                Boolean resultado = miConexion.insertaUsuario(textDNI.Text, nombreSinAcentos.ToUpperInvariant(), apellidoSinAcentos.ToUpperInvariant(), textTelefono.Text, textCorreo.Text, textDireccion1.Text, textDireccion2.Text, perfil, passHasheada);
                 if (resultado)
                 {
                     MessageBox.Show("INSERTADO CORRECTAMENTE");
@@ -126,6 +128,18 @@ namespace ProyectoVeterinario_2021
             if (textDireccion2.Text.Equals("Ex: Portal/Piso XXX"))
             {
                 textDireccion2.Text = "";
+            }
+        }
+
+        private void textDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textDNI.Text.Length == 8)
+            {
+                Validar.soloLetras(e);
+            }
+            else
+            {
+                Validar.soloNumeros(e);
             }
         }
     }

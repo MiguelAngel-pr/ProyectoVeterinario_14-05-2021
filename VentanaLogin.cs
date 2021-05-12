@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace ProyectoVeterinario_2021
 {
-    public partial class VentanaLogin : Form
+    public partial class ventanaLogin : Form
     {
         Conexion miConexion = new Conexion();
-        public VentanaLogin()
+        public ventanaLogin()
         {
             InitializeComponent();
         }
@@ -83,7 +83,7 @@ namespace ProyectoVeterinario_2021
         private void linkRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            VentanaRegistro ventana = new VentanaRegistro();
+            ventanaRegistro ventana = new ventanaRegistro();
             ventana.Show();
         }
 
