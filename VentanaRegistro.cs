@@ -21,10 +21,6 @@ namespace ProyectoVeterinario_2021
         {
             InitializeComponent();
         }
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            Application.Exit(); //cierra la aplicación completamente.
-        }
         public void cambio()
         {
             empleado = true;
@@ -34,8 +30,11 @@ namespace ProyectoVeterinario_2021
         private void botonVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ventanaLogin ventana = new ventanaLogin();
-            ventana.Show();
+            if (!empleado)
+            { 
+                ventanaLogin ventana = new ventanaLogin();
+                ventana.Show();
+            }
         }
 
         private void botonRegistro_Click(object sender, EventArgs e)
@@ -46,7 +45,8 @@ namespace ProyectoVeterinario_2021
             if (!Validar.validarEmail(email) || textContraseña.Text != textContraseña2.Text || textDNI.Text.Length != 9 || textTelefono.Text.Length != 9 
                 || !textDireccion1.Text.Substring(0, 6).Contains("Calle ") && !textDireccion1.Text.Substring(0, 8).Contains("Avenida ") || textCorreo.Text.Contains("@admin.com") 
                 || !empleado && textCorreo.Text.Contains("@weloveanimals.com") || textDNI.Text != textDNI.Text.ToUpperInvariant() || textNombre.Text.Length < 3 || textApellido.Text.Length < 3
-                || textDireccion2.Text.Length > 0 && !textDireccion2.Text.Substring(0, 7).Contains("Portal ") || textDireccion2.Text.Length > 0 && !textDireccion2.Text.Substring(0, 5).Contains("Piso "))
+                || textDireccion2.Text.Length > 0 && !textDireccion2.Text.Substring(0, 7).Contains("Portal ") || textDireccion2.Text.Length > 0 && !textDireccion2.Text.Substring(0, 5).Contains("Piso ")
+                || textTelefono.Text.Substring(0,1) != "9" && textTelefono.Text.Substring(0, 1) != "6")
             {
                 registro = false;
             }
@@ -62,7 +62,7 @@ namespace ProyectoVeterinario_2021
                 String nombreSinAcentos = reg.Replace(nombre, "");
                 String apellidoSinAcentos = reg.Replace(apellido, "");
 
-                Boolean resultado = miConexion.insertaUsuario(textDNI.Text, nombreSinAcentos.ToUpperInvariant(), apellidoSinAcentos.ToUpperInvariant(), textTelefono.Text, textCorreo.Text, textDireccion1.Text, textDireccion2.Text, perfil, passHasheada);
+                Boolean resultado = miConexion.insertaUsuario(textDNI.Text, nombreSinAcentos.ToUpperInvariant(), apellidoSinAcentos.ToUpperInvariant(), textTelefono.Text, textCorreo.Text.ToLower(), textDireccion1.Text, textDireccion2.Text, perfil, passHasheada);
                 if (resultado)
                 {
                     MessageBox.Show("INSERTADO CORRECTAMENTE");

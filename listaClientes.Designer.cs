@@ -43,6 +43,7 @@
             // 
             this.listaUsuarios.BackgroundColor = System.Drawing.Color.LightCyan;
             this.listaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listaUsuarios.GridColor = System.Drawing.Color.LightSeaGreen;
             this.listaUsuarios.Location = new System.Drawing.Point(13, 108);
             this.listaUsuarios.Name = "listaUsuarios";
             this.listaUsuarios.Size = new System.Drawing.Size(534, 251);
@@ -109,10 +110,10 @@
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.Location = new System.Drawing.Point(23, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(224, 32);
+            this.label3.Size = new System.Drawing.Size(369, 32);
             this.label3.TabIndex = 13;
             this.label3.Text = "Buscador de Clientes:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // listaClientes
             // 

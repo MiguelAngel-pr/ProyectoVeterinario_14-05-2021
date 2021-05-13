@@ -56,15 +56,15 @@ namespace ProyectoVeterinario_2021
             {
                 String emailUsado = textEmail.Text;
                 this.Hide();
+                ventanaEmpleado ventana1 = new ventanaEmpleado();
                 if (emailUsado.Contains("@admin.com"))//Contraseña: 0101
                 {
-                    ventanaAdmin ventana0 = new ventanaAdmin();
-                    ventana0.asignaPerfil(emailUsado);
-                    ventana0.Show();
+                    ventana1.asignaPerfil(emailUsado);
+                    ventana1.cambio();
+                    ventana1.Show();
                 }
                 else if (emailUsado.Contains("@weloveanimals.com"))
                 {
-                    ventanaEmpleado ventana1 = new ventanaEmpleado();
                     ventana1.asignaPerfil(emailUsado);
                     ventana1.Show();
                 }
