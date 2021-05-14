@@ -19,7 +19,7 @@ namespace ProyectoVeterinario_2021
         DataTable misClientes = new DataTable(); //variable que almacena el array de dos 
                                                  //dimensiones resultado de la consulta
         Boolean admin = false;
-        public listaClientes()
+        public listaClientes()//Método que mostrara una lista de todos los clientes o de todos los clientes y empleados
         {
             InitializeComponent();
             if (admin == false)
@@ -32,14 +32,14 @@ namespace ProyectoVeterinario_2021
             }
             listaUsuarios.DataSource = misClientes;
         }
-        public void cambio()
+        public void cambio()//Este método será ejecutado desde la pestaña de admin para cambiar la lista que se muestra.
         {
             admin = true;
             label3.Text = "Buscador de Usuarios";
             misClientes = miConexion.getListaUsuarios();
             listaUsuarios.DataSource = misClientes;
         }
-        private void botonBusqueda_Click(object sender, EventArgs e)
+        private void botonBusqueda_Click(object sender, EventArgs e)//Este es el botón que mandará los datos que el usuario halla escrito en la barra de busqueda para poder mostrar el cliente.
         {
             String busqueda = textBusqueda.Text.ToUpperInvariant();
             String dato = comboBox1.Text;

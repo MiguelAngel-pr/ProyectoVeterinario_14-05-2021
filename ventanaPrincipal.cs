@@ -27,12 +27,12 @@ namespace ProyectoVeterinario_2021
         {
             Application.Exit(); //cierra la aplicación completamente.
         }
-        private Image convierteBlobAImagen(byte[] img)
+        private Image convierteBlobAImagen(byte[] img)//Este método permite mostrar las imágenes por pantalla
         {
             MemoryStream ms = new System.IO.MemoryStream(img);
             return (Image.FromStream(ms));
         }
-        public void asignaPerfil(String correo)
+        public void asignaPerfil(String correo)//Este método permitirá mostrar los datos por pantalla de la cuenta con la que nos hallamos logueado
         {
             DataTable perfilElegido = miConexion.getPerfil(correo);
             textoNombre.Text = "Nombre: " + perfilElegido.Rows[0]["nombre"].ToString();
@@ -47,7 +47,7 @@ namespace ProyectoVeterinario_2021
             listaCitas.DataSource = misCitas;
         }
 
-        public void botonRegistro_Click(object sender, EventArgs e)
+        public void botonRegistro_Click(object sender, EventArgs e)//Este es el botón que mandará los datos que el usuario halla escrito para poder insertarlos en la BD.
         {
             registro = true;
             Conexion miConexion = new Conexion();
@@ -57,7 +57,7 @@ namespace ProyectoVeterinario_2021
             }
             if (registro)
             {
-                Boolean resultado = miConexion.insertaCita(textoDNI.Text, textIDMascota.Text, dateTimePicker1.Value.ToString("yyyyMMdd"), textHora.Text, comboBoxLugar.Text, textMotivo.Text);
+                Boolean resultado = miConexion.insertaCita(textoDNI.Text, textIDMascota.Text, dateTimePicker1.Value.ToString("yyyyMMdd"), textHora.Text, comboBoxLugar.Text.ToUpperInvariant(), textMotivo.Text);
                 if (resultado)
                 {
                     MessageBox.Show("INSERTADO CORRECTAMENTE");
@@ -73,12 +73,7 @@ namespace ProyectoVeterinario_2021
             }
         }
 
-        private void textIDMascota_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validar.soloNumeros(e);
-        }
-
-        private void botonAñadirMascota_Click(object sender, EventArgs e)
+        private void botonAñadirMascota_Click(object sender, EventArgs e)//Este es el botón que mandará los datos que el usuario halla escrito para poder insertarlos en la BD.
         {
             registro = true;
             Conexion miConexion = new Conexion();
@@ -110,7 +105,7 @@ namespace ProyectoVeterinario_2021
                 MessageBox.Show("HA OCURRIDO UN ERROR INESPERADO, INTENTALO MÁS TARDE");
             }
         }
-
+        //Métodos usados para validar
         private void textNombre_Mascota_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.soloLetras(e);
@@ -140,13 +135,16 @@ namespace ProyectoVeterinario_2021
         {
             Validar.soloNumeros(e);
         }
-
-        private void botonBusqueda_Click(object sender, EventArgs e)
+        private void textIDMascota_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.soloNumeros(e);
+        }
+        private void botonBusqueda_Click(object sender, EventArgs e)//Con este método se mandará los datos que el usuario halla escrito en la barra de busqueda para poder mostrar los resultados
         {
             String busqueda = busquedaMascotas.Text.ToUpperInvariant();
             String dato = comboBoxMascotas.Text;
             String dueño_Actual = textoDNI.Text;
-            //Metodo para quitar acentos
+            //Con esto quito los acentos
             if (dato == "Nombre")
             {
                 String _busqueda = busqueda.Normalize(NormalizationForm.FormD);

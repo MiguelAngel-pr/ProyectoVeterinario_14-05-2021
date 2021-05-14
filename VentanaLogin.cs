@@ -23,6 +23,7 @@ namespace ProyectoVeterinario_2021
             Application.Exit(); //cierra la aplicación completamente.
         }
 
+        //Métodos usados para poner subtexto en los textBox
         public void textEmail_Click(object sender, EventArgs e)
         {
             if (textEmail.Text.Equals("Introduzca el email"))
@@ -47,16 +48,18 @@ namespace ProyectoVeterinario_2021
         {
             textContraseña.ForeColor = Color.LightSeaGreen;
         }
+        //Método con el cual se mandará la información que el usuario halla puesto en los textbox para comprobarla.
         public void botonLogin_Click(object sender, EventArgs e)
         {
-            String email = textEmail.Text; //leo lo que el usuario halla puesto.
+            String email = textEmail.Text;
             String password = textContraseña.Text;
             //Cuenta de prueba; email= pepito@gmail.com | contraseña= 1234
-            if (miConexion.loginInicial(email, password))
+            if (miConexion.loginInicial(email, password))//si el usuario y la contraseña es correcta
             {
                 String emailUsado = textEmail.Text;
                 this.Hide();
                 ventanaEmpleado ventana1 = new ventanaEmpleado();
+                //Dependiendo del email usado podremos acceder a diferentes opciones.
                 if (emailUsado.Contains("@admin.com"))//Contraseña: 0101
                 {
                     ventana1.asignaPerfil(emailUsado);
@@ -80,14 +83,14 @@ namespace ProyectoVeterinario_2021
                 MessageBox.Show("EL USUARIO O LA CONTRASEÑA SON INCORRECTOS");
             }
         }
-        private void linkRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)//Este método nos llevará a la pestaña de registro
         {
             this.Hide();
             ventanaRegistro ventana = new ventanaRegistro();
             ventana.Show();
         }
 
-        private void checkBoxContraseña_CheckedChanged(object sender, EventArgs e)
+        private void checkBoxContraseña_CheckedChanged(object sender, EventArgs e)//Método usado para mostrar o no la contraseña
         {
             textContraseña.UseSystemPasswordChar = true;
             if (checkBoxContraseña.Checked)

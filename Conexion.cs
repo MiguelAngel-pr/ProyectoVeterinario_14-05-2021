@@ -16,8 +16,8 @@ namespace ProyectoVeterinario_2021
           //La contraseña es "root" o "".
             conexion = new MySqlConnection("Server=127.0.0.1; Database=ejercicio_veterinario; Uid=root; Pwd=; Port=3306");
         }
-        public Boolean loginInicial(String _email, String _password)
-        {
+        public Boolean loginInicial(String _email, String _password)//Con este método se comprobará que el email y la contraseña sean correctas,
+        {                                                           //y si lo son se permitirá el acceso a esa cuenta.
             try
             {
                 conexion.Open();
@@ -25,11 +25,9 @@ namespace ProyectoVeterinario_2021
                 //MySqlCommand consultaIdPerfil = new MySqlCommand("SELECT perfil FROM cliente WHERE email=@_email", conexion);
                 consulta.Parameters.AddWithValue("@_email", _email);
                 MySqlDataReader resultado = consulta.ExecuteReader(); //guardo el resultado de la query
-                //MySqlDataReader resultado2 = consultaIdPerfil.ExecuteReader();
                 if (resultado.Read())
                 {
                     String passHasheada = resultado.GetString("password");
-                    //String idPerfil = resultado2.GetString("perfil");
                     if (BCrypt.Net.BCrypt.Verify(_password, passHasheada)/* && idPerfil=="0"*/)
                     {
                         conexion.Close();
@@ -47,6 +45,7 @@ namespace ProyectoVeterinario_2021
         }
 
         public Boolean insertaUsuario(String _DNI, String _nombre, String _apellido, String _telefono, String _email, String _direccion1, String _direccion2, int _perfil, String _password)
+        //Este es el método con el cual se insertarán los datos del usuario registrado en la base de datos.
         {
             try
             {
@@ -80,6 +79,7 @@ namespace ProyectoVeterinario_2021
         }
 
         public Boolean insertaCita(String _id_dueño, String _id_mascota, String _fecha, String _hora, String _lugar, String _motivo)
+        //Este es el método con el cual se insertarán los datos de la cita en la base de datos.
         {
             try
             {
@@ -110,6 +110,7 @@ namespace ProyectoVeterinario_2021
         }
 
         public Boolean insertaMascota(String _id_mascota, String _nombre, String _animal, String _raza, String _sexo, String _edad, String _peso, String _altura, String _id_dueño)
+        //Este es el método con el cual se insertarán los datos de la mascota registrado en la base de datos.
         {
             try
             {
@@ -143,6 +144,7 @@ namespace ProyectoVeterinario_2021
         }
 
         public DataTable getPerfil(String _correo)
+        //Con este método se seleccionará el perfil usado al iniciar sesión para usar la información que queramos de este.
         {
             try
             {
@@ -161,6 +163,7 @@ namespace ProyectoVeterinario_2021
         }
 
         public DataTable getListaUsuarios()
+        //Con este método obtendremos una lista de todos los clientes y los empleados.
         {
             try
             {
@@ -179,6 +182,7 @@ namespace ProyectoVeterinario_2021
         }
 
         public DataTable getListaClientes()
+        //Con este método obtendremos una lista de todos los clientes
         {
             try
             {
@@ -197,6 +201,7 @@ namespace ProyectoVeterinario_2021
         }
 
         public DataTable getListaMascotas(String _IdDueño)
+        //Con este método obtendremos una lista de todas las mascotas de un cliente.
         {
             try
             {
@@ -215,6 +220,7 @@ namespace ProyectoVeterinario_2021
         }
 
         public DataTable getListaCitas(String _IdDueño)
+        //Con este método obtendremos una lista de todas las citas de un cliente.
         {
             try
             {
@@ -233,6 +239,7 @@ namespace ProyectoVeterinario_2021
         }
 
         public DataTable getListaPorDatoUsuario(String _dato, String _busqueda)
+        //Este método se usará para buscar a cada cliente o empleado y mostrar una lista con su información
         {
             try
             {
@@ -276,6 +283,7 @@ namespace ProyectoVeterinario_2021
         }
 
         public DataTable getListaPorDatoCliente(String _dato, String _busqueda)
+        //Este método se usará para buscar a cada cliente y mostrar una lista con su información
         {
             try
             {
@@ -319,6 +327,7 @@ namespace ProyectoVeterinario_2021
         }
 
         public DataTable getListaPorDatoCita(String _dato, String _busqueda)
+        //Este método lo usará cada cliente para buscar información sobre sus citas y mostrar una lista con su información
         {
             try
             {
@@ -357,6 +366,7 @@ namespace ProyectoVeterinario_2021
         }
 
         public DataTable getInfoMascota(String _dato, String _busqueda, String _dueño)
+        //Este método se usará para buscar a cada mascota y mostrar una lista con su información
         {
             try
             {

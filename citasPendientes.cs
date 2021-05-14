@@ -19,7 +19,7 @@ namespace ProyectoVeterinario_2021
             InitializeComponent();
         }
 
-        private void botonCitas_Click(object sender, EventArgs e)
+        private void botonCitas_Click(object sender, EventArgs e)//Con este método se mandará la información de la barra de busqueda que el empleado halla puesto para poder mostrar la cita correspondiente.
         {
             Conexion miConexion = new Conexion();
             String busqueda = textBusqueda.Text.ToUpperInvariant();
@@ -30,6 +30,7 @@ namespace ProyectoVeterinario_2021
                 String _busqueda = busqueda.Normalize(NormalizationForm.FormD);
                 Regex reg = new Regex("[^a-zA-Z0-9 ]");
                 String busquedaSinAcentos = reg.Replace(_busqueda, "");
+                busquedaSinAcentos = busquedaSinAcentos.ToUpperInvariant();
                 misCitas = miConexion.getListaPorDatoCita(dato, busquedaSinAcentos);
             }
             else

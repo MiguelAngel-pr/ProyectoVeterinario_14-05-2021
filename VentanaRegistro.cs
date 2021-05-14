@@ -15,19 +15,19 @@ namespace ProyectoVeterinario_2021
     public partial class ventanaRegistro : Form
     {
         Boolean registro = true;
-        Boolean empleado = false;
+        Boolean empleado = false;//Esta variable se usará para permitirnos registrarnos como empleados
         int perfil = 0;
         public ventanaRegistro()
         {
             InitializeComponent();
         }
-        public void cambio()
+        public void cambio()//Este método será ejecutado desde la pestaña de admin para permitirnos registra a los empleados
         {
             empleado = true;
             label1.Text = "Registro Empleado";
             perfil = 1;
         }
-        private void botonVolver_Click(object sender, EventArgs e)
+        private void botonVolver_Click(object sender, EventArgs e)//Apretando a este botón volveremos atras hacia la pestaña del login o del admin
         {
             this.Hide();
             if (!empleado)
@@ -37,11 +37,12 @@ namespace ProyectoVeterinario_2021
             }
         }
 
-        private void botonRegistro_Click(object sender, EventArgs e)
+        private void botonRegistro_Click(object sender, EventArgs e)//Este es el botón que mandará los datos que el usuario halla escrito para poder insertarlos en la BD.
         {
             registro = true;
             String email = textCorreo.Text;
             Conexion miConexion = new Conexion();
+            //Con esto validaremos la información que el usuario escriba para que esta sea lo más correcta posible
             if (!Validar.validarEmail(email) || textContraseña.Text != textContraseña2.Text || textDNI.Text.Length != 9 || textTelefono.Text.Length != 9 
                 || !textDireccion1.Text.Substring(0, 6).Contains("Calle ") && !textDireccion1.Text.Substring(0, 8).Contains("Avenida ") || textCorreo.Text.Contains("@admin.com") 
                 || !empleado && textCorreo.Text.Contains("@weloveanimals.com") || textDNI.Text != textDNI.Text.ToUpperInvariant() || textNombre.Text.Length < 3 || textApellido.Text.Length < 3
@@ -51,11 +52,11 @@ namespace ProyectoVeterinario_2021
                 registro = false;
             }
 
-            if (registro)
+            if (registro)//Si la validación se lleva a cabo correctamente se podrán insertar los datos.
             {
                 String passHasheada = BCrypt.Net.BCrypt.HashPassword(textContraseña.Text, BCrypt.Net.BCrypt.GenerateSalt());
 
-                //Metodo para quitar acentos
+                //Con esto quito los acentos
                 String nombre = textNombre.Text.Normalize(NormalizationForm.FormD);
                 String apellido = textApellido.Text.Normalize(NormalizationForm.FormD);
                 Regex reg = new Regex("[^a-zA-Z0-9 ]");
@@ -77,6 +78,7 @@ namespace ProyectoVeterinario_2021
                 MessageBox.Show("HA OCURRIDO UN ERROR INESPERADO, INTENTALO MÁS TARDE");
             }
         }
+        //Métodos usados para validar y poner subtextos
         private void textNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.soloLetras(e);

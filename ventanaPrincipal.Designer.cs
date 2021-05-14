@@ -52,6 +52,7 @@ namespace ProyectoVeterinario_2021
             this.panel11 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.listaCitas = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listaMascotas = new System.Windows.Forms.DataGridView();
@@ -62,6 +63,7 @@ namespace ProyectoVeterinario_2021
             this.botonBusqueda = new System.Windows.Forms.Button();
             this.busquedaMascotas = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.listaMascotas2 = new System.Windows.Forms.DataGridView();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -76,6 +78,7 @@ namespace ProyectoVeterinario_2021
             this.panel12 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textID = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.textPeso = new System.Windows.Forms.TextBox();
@@ -98,9 +101,6 @@ namespace ProyectoVeterinario_2021
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listaMascotas2 = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -112,6 +112,7 @@ namespace ProyectoVeterinario_2021
             ((System.ComponentModel.ISupportInitialize)(this.listaMascotas)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaMascotas2)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPerfil)).BeginInit();
@@ -120,7 +121,6 @@ namespace ProyectoVeterinario_2021
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaMascotas2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage4
@@ -192,11 +192,11 @@ namespace ProyectoVeterinario_2021
             this.comboBoxLugar.FormattingEnabled = true;
             this.comboBoxLugar.IntegralHeight = false;
             this.comboBoxLugar.Items.AddRange(new object[] {
-            "Madrid - Pozuelo de Alarcón",
+            "Madrid - Pozuelo de Alarcon",
             "Madrid - Alcobendas",
             "Valladolid - Tordesillas",
             "Malaga - Torremolinos",
-            "Asturias - Gijón"});
+            "Asturias - Gijon"});
             this.comboBoxLugar.Location = new System.Drawing.Point(162, 263);
             this.comboBoxLugar.Name = "comboBoxLugar";
             this.comboBoxLugar.Size = new System.Drawing.Size(255, 24);
@@ -290,11 +290,11 @@ namespace ProyectoVeterinario_2021
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(162, 219);
             this.dateTimePicker1.MaxDate = new System.DateTime(2024, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(2021, 5, 11, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(2021, 5, 14, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(150, 21);
             this.dateTimePicker1.TabIndex = 32;
-            this.dateTimePicker1.Value = new System.DateTime(2021, 5, 11, 11, 15, 47, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2021, 5, 14, 18, 9, 34, 0);
             // 
             // panel5
             // 
@@ -396,6 +396,14 @@ namespace ProyectoVeterinario_2021
             this.listaCitas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.listaCitas.Size = new System.Drawing.Size(445, 279);
             this.listaCitas.TabIndex = 18;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel3.Location = new System.Drawing.Point(0, 504);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(490, 91);
+            this.panel3.TabIndex = 22;
             // 
             // panel10
             // 
@@ -519,6 +527,17 @@ namespace ProyectoVeterinario_2021
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(460, 180);
             this.panel4.TabIndex = 15;
+            // 
+            // listaMascotas2
+            // 
+            this.listaMascotas2.BackgroundColor = System.Drawing.Color.LightCyan;
+            this.listaMascotas2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listaMascotas2.GridColor = System.Drawing.Color.LightSeaGreen;
+            this.listaMascotas2.Location = new System.Drawing.Point(32, 30);
+            this.listaMascotas2.Name = "listaMascotas2";
+            this.listaMascotas2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.listaMascotas2.Size = new System.Drawing.Size(404, 122);
+            this.listaMascotas2.TabIndex = 18;
             // 
             // panel8
             // 
@@ -689,6 +708,22 @@ namespace ProyectoVeterinario_2021
             this.tabPage5.Size = new System.Drawing.Size(489, 591);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Añadir Mascota";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.PowderBlue;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.IntegralHeight = false;
+            this.comboBox1.Items.AddRange(new object[] {
+            "kg",
+            "g"});
+            this.comboBox1.Location = new System.Drawing.Point(423, 361);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(51, 24);
+            this.comboBox1.TabIndex = 62;
             // 
             // textID
             // 
@@ -948,41 +983,6 @@ namespace ProyectoVeterinario_2021
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // listaMascotas2
-            // 
-            this.listaMascotas2.BackgroundColor = System.Drawing.Color.LightCyan;
-            this.listaMascotas2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listaMascotas2.GridColor = System.Drawing.Color.LightSeaGreen;
-            this.listaMascotas2.Location = new System.Drawing.Point(32, 30);
-            this.listaMascotas2.Name = "listaMascotas2";
-            this.listaMascotas2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.listaMascotas2.Size = new System.Drawing.Size(404, 122);
-            this.listaMascotas2.TabIndex = 18;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panel3.Location = new System.Drawing.Point(0, 504);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(490, 91);
-            this.panel3.TabIndex = 22;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.PowderBlue;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.Items.AddRange(new object[] {
-            "kg",
-            "g"});
-            this.comboBox1.Location = new System.Drawing.Point(423, 361);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(51, 24);
-            this.comboBox1.TabIndex = 62;
-            // 
             // ventanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1008,6 +1008,7 @@ namespace ProyectoVeterinario_2021
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.listaMascotas2)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fotoPerfil)).EndInit();
@@ -1017,7 +1018,6 @@ namespace ProyectoVeterinario_2021
             this.panel14.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaMascotas2)).EndInit();
             this.ResumeLayout(false);
 
         }

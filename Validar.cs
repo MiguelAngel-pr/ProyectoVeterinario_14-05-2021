@@ -10,7 +10,7 @@ namespace ProyectoVeterinario_2021
 {
     class Validar
     {
-        public static void soloLetras(KeyPressEventArgs V)
+        public static void soloLetras(KeyPressEventArgs V)//Método que solo permitirá usar letras
         {
             if (Char.IsLetter(V.KeyChar))
             {
@@ -30,7 +30,7 @@ namespace ProyectoVeterinario_2021
                 MessageBox.Show("Solo se permiten letras");
             }
         }
-        public static Boolean validarEmail(string email)
+        public static Boolean validarEmail(string email)//Método que comprobará que el email este bien escrito
         {
             String expresion;
             expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
@@ -50,7 +50,7 @@ namespace ProyectoVeterinario_2021
                 return false;
             }
         }
-        public static void soloNumeros(KeyPressEventArgs V)
+        public static void soloNumeros(KeyPressEventArgs V)//Método que solo permitirá usar números
         {
             if (Char.IsDigit(V.KeyChar))
             {
