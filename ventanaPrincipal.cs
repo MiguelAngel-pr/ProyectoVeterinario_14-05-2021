@@ -86,11 +86,13 @@ namespace ProyectoVeterinario_2021
             String altura = textAltura.Text + "cm";
             //Metodo para quitar acentos
             String nombre = textNombre_Mascota.Text.Normalize(NormalizationForm.FormD);
+            String raza = textRaza.Text.Normalize(NormalizationForm.FormD);
             Regex reg = new Regex("[^a-zA-Z0-9 ]");
             String nombreSinAcentos = reg.Replace(nombre, "");
+            String razaSinAcentos = reg.Replace(raza, "");
             if (registro)
             {
-                Boolean resultado = miConexion.insertaMascota(textID.Text, nombreSinAcentos.ToUpperInvariant(), comboBoxAnimal.Text, textRaza.Text, comboBoxSexo.Text, textEdad.Text, peso, altura, textoDNI.Text);
+                Boolean resultado = miConexion.insertaMascota(textID.Text, nombreSinAcentos.ToUpperInvariant(), comboBoxAnimal.Text, razaSinAcentos.ToUpperInvariant(), comboBoxSexo.Text, textEdad.Text, peso, altura, textoDNI.Text);
                 if (resultado)
                 {
                     MessageBox.Show("INSERTADO CORRECTAMENTE");
@@ -145,7 +147,7 @@ namespace ProyectoVeterinario_2021
             String dato = comboBoxMascotas.Text;
             String dueño_Actual = textoDNI.Text;
             //Con esto quito los acentos
-            if (dato == "Nombre")
+            if (dato == "Nombre" || dato =="Raza")
             {
                 String _busqueda = busqueda.Normalize(NormalizationForm.FormD);
                 Regex reg = new Regex("[^a-zA-Z0-9 ]");

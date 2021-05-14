@@ -873,7 +873,7 @@ namespace ProyectoVeterinario_2021
             this.comboBoxAnimal.Items.AddRange(new object[] {
             "Perro",
             "Gato",
-            "Hámster",
+            "Hamster",
             "Serpiente",
             "Ave"});
             this.comboBoxAnimal.Location = new System.Drawing.Point(139, 242);
